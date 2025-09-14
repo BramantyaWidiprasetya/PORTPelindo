@@ -1,25 +1,24 @@
 "use client";
 import dynamic from "next/dynamic";
+import PageMeta from "../../components/common/PageMeta";
 import EcommerceMetrics from "../../components/ecommerce/EcommerceMetrics";
 import RecentOrders from "../../components/ecommerce/RecentOrders";
-import PageMeta from "../../components/common/PageMeta";
 
-const MonthlySalesChart = dynamic(
-  () => import("../../components/ecommerce/MonthlySalesChart"),
-  { ssr: false }
-);
-const StatisticsChart = dynamic(
-  () => import("../../components/ecommerce/StatisticsChart"),
-  { ssr: false }
-);
-const MonthlyTarget = dynamic(
-  () => import("../../components/ecommerce/MonthlyTarget"),
-  { ssr: false }
-);
-const DemographicCard = dynamic(
-  () => import("../../components/ecommerce/DemographicCard"),
-  { ssr: false }
-);
+const MonthlySalesChart = dynamic(() => import("../../components/ecommerce/MonthlySalesChart"), {
+  ssr: false,
+});
+
+const StatisticsChart = dynamic(() => import("../../components/ecommerce/StatisticsChart"), {
+  ssr: false,
+});
+
+const MonthlyTarget = dynamic(() => import("../../components/ecommerce/MonthlyTarget"), {
+  ssr: false,
+});
+
+const DemographicCard = dynamic(() => import("../../components/ecommerce/DemographicCard"), {
+  ssr: false,
+});
 
 export default function page() {
   return (
