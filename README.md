@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Scripts
+
+- `dev`: Start the dev server
+- `build`: Build the app for production
+- `start`: Start the production server
+- `lint`: Lint the project with ESLint
+- `format`: Format files with Prettier
+- `format:check`: Check formatting without writing changes
+
+> Note: This project uses ESLint flat config and Prettier with Tailwind class sorting.

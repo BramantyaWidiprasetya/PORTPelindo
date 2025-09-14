@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 281 123" width="281" height="123" fill="none">
+  <rect x="0" y="0" width="281" height="123" rx="8" fill="white"/>
+  <g>
+    <circle cx="62" cy="62" r="30" fill="#0475BC" />
+    <circle cx="95" cy="62" r="30" fill="#32B6E9" />
+    <text x="140" y="70" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" fill="#0475BC">ICON</text>
+  </g>
+</svg>
+
