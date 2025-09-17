@@ -151,7 +151,7 @@ export default function ResilienceResponsePage() {
     <div className="grid w-screen [align-items:start] justify-items-center bg-transparent">
       <div className="relative h-[1024px] w-[1440px] overflow-hidden bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(50,182,233,1)_100%)]">
         {/* Navigating vs Operational Time */}
-        <Card className="absolute top-[607px] left-[11px] h-[263px] w-[482px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[607px] left-[11px] h-[263px] w-[482px] cursor-pointer rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="absolute top-0 left-[19px] h-[46px] w-[409px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Navigating vs Operational Time
@@ -187,7 +187,7 @@ export default function ResilienceResponsePage() {
         </Card>
 
         {/* Factor Analysis */}
-        <Card className="absolute top-[878px] left-[11px] h-[261px] w-[482px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[878px] left-[11px] h-[261px] w-[482px] cursor-pointer rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="absolute top-0 left-[19px] h-[46px] w-[260px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Factor Analysis
@@ -207,7 +207,7 @@ export default function ResilienceResponsePage() {
         </Card>
 
         {/* Digital Twin Port */}
-        <div className="absolute top-[135px] left-[18px] h-[466px] w-[1419px] overflow-hidden rounded-[10px] transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] cursor-pointer">
+        <div className="absolute top-[135px] left-[18px] h-[466px] w-[1419px] cursor-pointer overflow-hidden rounded-[10px] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-[1.01] hover:shadow-2xl">
           <Image
             src="/digital-twin.png"
             alt="Digital Twin Port"
@@ -221,7 +221,7 @@ export default function ResilienceResponsePage() {
             {[0, 1, 2, 3].map((i) => (
               <div
                 key={i}
-                className={`absolute top-0 h-[66px] w-[214px] rounded-[10px] bg-[#ffffff80] backdrop-blur-sm transition-all duration-200 ease-in-out hover:bg-white/90 hover:-translate-y-1 hover:shadow-lg ${i === 0 ? "left-0" : i === 1 ? "left-[222px]" : i === 2 ? "left-[443px]" : "left-[665px]"}`}
+                className={`absolute top-0 h-[66px] w-[214px] rounded-[10px] bg-[#ffffff80] backdrop-blur-sm transition-all duration-200 ease-in-out hover:-translate-y-1 hover:bg-white/90 hover:shadow-lg ${i === 0 ? "left-0" : i === 1 ? "left-[222px]" : i === 2 ? "left-[443px]" : "left-[665px]"}`}
               />
             ))}
           </div>
@@ -253,7 +253,7 @@ export default function ResilienceResponsePage() {
         </div>
 
         {/* Incident Response List */}
-        <Card className="absolute top-[610px] left-[793px] h-[408px] w-[640px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[610px] left-[793px] h-[408px] w-[640px] cursor-pointer rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="absolute top-2.5 left-[21px] h-[46px] w-[482px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Incident Response List
@@ -355,7 +355,7 @@ export default function ResilienceResponsePage() {
                       {incident.status}
                     </div>
                     <div
-                      className={`absolute top-px left-[95px] h-[34px] w-[26px] rounded-[5px] shadow-[0px_4px_4px_#00000040] transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${incident.statusColor}`}
+                      className={`absolute top-px left-[95px] h-[34px] w-[26px] rounded-[5px] shadow-[0px_4px_4px_#00000040] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${incident.statusColor}`}
                     />
                   </div>
                 </div>
@@ -365,7 +365,7 @@ export default function ResilienceResponsePage() {
         </Card>
 
         {/* Safety Copilot */}
-        <Card className="absolute top-[610px] left-[502px] h-[408px] w-[282px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[610px] left-[502px] h-[408px] w-[282px] cursor-pointer rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="absolute top-[9px] left-[13px] h-[46px] w-[260px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Safety Copilot

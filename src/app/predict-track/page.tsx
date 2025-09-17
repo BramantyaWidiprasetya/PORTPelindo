@@ -8,15 +8,7 @@ import Image from "next/image";
 import { VesselSummaryCard } from "./VesselSummaryCard";
 import FactorAnalysisLive from "./FactorAnalysisLive";
 
-function SpeedBar3D({
-  left,
-  top,
-  height,
-}: {
-  left: string;
-  top: string;
-  height: string;
-}) {
+function SpeedBar3D({ left, top, height }: { left: string; top: string; height: string }) {
   return (
     <div className={`absolute ${left} ${top} pointer-events-none`}>
       <div className={`relative ${height} w-[27px]`}>
@@ -25,13 +17,13 @@ function SpeedBar3D({
 
         {/* SIDE (lebih gelap sedikit) */}
         <div
-          className="absolute right-[-6px] top-0 h-full w-[6px] rounded-sm bg-[#005489] opacity-80 skew-y-6"
+          className="absolute top-0 right-[-6px] h-full w-[6px] skew-y-6 rounded-sm bg-[#005489] opacity-80"
           style={{ filter: "brightness(0.75)" }}
         />
 
         {/* TOP (lebih terang sedikit) */}
         <div
-          className="absolute -top-[6px] left-0 h-[6px] w-[27px] rounded-sm bg-[#005489] opacity-90 skew-x-12"
+          className="absolute -top-[6px] left-0 h-[6px] w-[27px] skew-x-12 rounded-sm bg-[#005489] opacity-90"
           style={{ filter: "brightness(1.25)" }}
         />
       </div>
@@ -250,7 +242,7 @@ export default function PredictTrackPage() {
     <div className="grid w-screen [align-items:start] justify-items-center bg-transparent">
       <div className="relative h-[1024px] w-[1440px] bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(50,182,233,1)_100%)]">
         {/* Navigating vs Operational Time Card */}
-        <Card className="absolute top-[40px] left-[9px] h-[263px] w-[482px] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[40px] left-[9px] h-[263px] w-[482px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="p-0">
             <CardTitle className="absolute top-0 left-[19px] h-[46px] w-[409px] [font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Navigating vs Operational Time
@@ -289,7 +281,7 @@ export default function PredictTrackPage() {
         </Card>
 
         {/* Factor Analysis Card */}
-        <Card className="absolute top-[311px] left-[9px] h-[261px] w-[482px] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[311px] left-[9px] h-[261px] w-[482px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="p-0">
             <CardTitle className="absolute top-0 left-[19px] h-[46px] w-[260px] [font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Factor Analysis
@@ -353,7 +345,7 @@ export default function PredictTrackPage() {
         </Card>
 
         {/* Speed Distribution Card */}
-        <Card className="absolute top-[580px] left-[9px] h-[263px] w-[482px] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[580px] left-[9px] h-[263px] w-[482px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="p-0">
             <CardTitle className="absolute top-0 left-[19px] h-[46px] w-[260px] [font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Speed Distribution
@@ -390,7 +382,7 @@ export default function PredictTrackPage() {
         </Card>
 
         {/* Large Shipment Tracking Map Card */}
-        <Card className="absolute top-[40px] left-[497px] h-[394px] w-[940px] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] cursor-pointer">
+        <Card className="absolute top-[40px] left-[497px] h-[394px] w-[940px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl">
           <CardContent className="relative p-0">
             <div className="absolute top-px right-0 left-0 h-[393px] overflow-hidden rounded-[10px] border border-solid border-[#32b6e9]">
               <Image
@@ -413,7 +405,7 @@ export default function PredictTrackPage() {
                 {shipmentStats.map((stat, index) => (
                   <div
                     key={index}
-                    className="rounded-lg bg-white/80 p-4 shadow-md backdrop-blur-sm transition-all duration-200 ease-in-out hover:shadow-lg hover:bg-white/90 hover:-translate-y-1"
+                    className="rounded-lg bg-white/80 p-4 shadow-md backdrop-blur-sm transition-all duration-200 ease-in-out hover:-translate-y-1 hover:bg-white/90 hover:shadow-lg"
                   >
                     <div className="flex items-center gap-3">
                       <div className={`h-8 w-8 ${stat.color} rounded`} />
@@ -430,7 +422,7 @@ export default function PredictTrackPage() {
         </Card>
 
         {/* Shipment Tracking Table Card */}
-        <Card className="absolute top-[435px] left-[793px] h-[408px] w-[640px] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[435px] left-[793px] h-[408px] w-[640px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="p-0">
             <CardTitle className="absolute top-2.5 left-[21px] h-[46px] w-[482px] [font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Shipment Tracking
@@ -457,7 +449,10 @@ export default function PredictTrackPage() {
                   </thead>
                   <tbody>
                     {shipmentTrackingData.map((item, index) => (
-                      <tr key={index} className="border-b border-gray-100 transition-colors duration-200 hover:bg-gray-50">
+                      <tr
+                        key={index}
+                        className="border-b border-gray-100 transition-colors duration-200 hover:bg-gray-50"
+                      >
                         <td className="px-2 py-3">
                           <div className="flex items-center gap-3">
                             <div className="h-4 w-4 rounded border border-gray-400"></div>
@@ -497,7 +492,7 @@ export default function PredictTrackPage() {
         </Card>
 
         {/* Vessel Summary Card */}
-        <Card className="absolute top-[436px] left-[509px] h-[408px] w-[282px] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
+        <Card className="absolute top-[436px] left-[509px] h-[408px] w-[282px] cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-2 hover:scale-105 hover:shadow-xl">
           <CardHeader className="p-0">
             <CardTitle className="absolute top-[9px] left-[13px] h-[46px] w-[260px] [font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Vessel Summary
