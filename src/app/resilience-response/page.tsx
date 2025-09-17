@@ -151,7 +151,7 @@ export default function ResilienceResponsePage() {
     <div className="grid w-screen [align-items:start] justify-items-center bg-transparent">
       <div className="relative h-[1024px] w-[1440px] overflow-hidden bg-[linear-gradient(180deg,rgba(255,255,255,1)_0%,rgba(50,182,233,1)_100%)]">
         {/* Navigating vs Operational Time */}
-        <Card className="absolute top-[607px] left-[11px] h-[263px] w-[482px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040]">
+        <Card className="absolute top-[607px] left-[11px] h-[263px] w-[482px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
           <CardHeader className="absolute top-0 left-[19px] h-[46px] w-[409px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Navigating vs Operational Time
@@ -187,7 +187,7 @@ export default function ResilienceResponsePage() {
         </Card>
 
         {/* Factor Analysis */}
-        <Card className="absolute top-[878px] left-[11px] h-[261px] w-[482px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040]">
+        <Card className="absolute top-[878px] left-[11px] h-[261px] w-[482px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
           <CardHeader className="absolute top-0 left-[19px] h-[46px] w-[260px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Factor Analysis
@@ -207,7 +207,7 @@ export default function ResilienceResponsePage() {
         </Card>
 
         {/* Digital Twin Port */}
-        <div className="absolute top-[135px] left-[18px] h-[466px] w-[1419px] overflow-hidden rounded-[10px]">
+        <div className="absolute top-[135px] left-[18px] h-[466px] w-[1419px] overflow-hidden rounded-[10px] transition-all duration-300 ease-in-out hover:shadow-2xl hover:-translate-y-2 hover:scale-[1.01] cursor-pointer">
           <Image
             src="/digital-twin.png"
             alt="Digital Twin Port"
@@ -221,7 +221,7 @@ export default function ResilienceResponsePage() {
             {[0, 1, 2, 3].map((i) => (
               <div
                 key={i}
-                className={`absolute top-0 h-[66px] w-[214px] rounded-[10px] bg-[#ffffff80] ${i === 0 ? "left-0" : i === 1 ? "left-[222px]" : i === 2 ? "left-[443px]" : "left-[665px]"}`}
+                className={`absolute top-0 h-[66px] w-[214px] rounded-[10px] bg-[#ffffff80] backdrop-blur-sm transition-all duration-200 ease-in-out hover:bg-white/90 hover:-translate-y-1 hover:shadow-lg ${i === 0 ? "left-0" : i === 1 ? "left-[222px]" : i === 2 ? "left-[443px]" : "left-[665px]"}`}
               />
             ))}
           </div>
@@ -253,7 +253,7 @@ export default function ResilienceResponsePage() {
         </div>
 
         {/* Incident Response List */}
-        <Card className="absolute top-[610px] left-[793px] h-[408px] w-[640px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040]">
+        <Card className="absolute top-[610px] left-[793px] h-[408px] w-[640px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
           <CardHeader className="absolute top-2.5 left-[21px] h-[46px] w-[482px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Incident Response List
@@ -284,9 +284,9 @@ export default function ResilienceResponsePage() {
               const top = [135, 190, 245, 300, 355][index];
               const second = top + 15;
               return (
-                <div key={index}>
+                <div key={index} className="transition-colors duration-200 hover:bg-blue-50/30">
                   <Checkbox
-                    className="absolute h-[22px] w-[22px] rounded-[5px] border border-black"
+                    className="absolute h-[22px] w-[22px] rounded-[5px] border border-black transition-all duration-200 hover:border-blue-500 hover:shadow-md"
                     style={{ top: `${top}px`, left: "21px" }}
                   />
                   <div
@@ -355,7 +355,7 @@ export default function ResilienceResponsePage() {
                       {incident.status}
                     </div>
                     <div
-                      className={`absolute top-px left-[95px] h-[34px] w-[26px] rounded-[5px] shadow-[0px_4px_4px_#00000040] ${incident.statusColor}`}
+                      className={`absolute top-px left-[95px] h-[34px] w-[26px] rounded-[5px] shadow-[0px_4px_4px_#00000040] transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 ${incident.statusColor}`}
                     />
                   </div>
                 </div>
@@ -365,7 +365,7 @@ export default function ResilienceResponsePage() {
         </Card>
 
         {/* Safety Copilot */}
-        <Card className="absolute top-[610px] left-[502px] h-[408px] w-[282px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040]">
+        <Card className="absolute top-[610px] left-[502px] h-[408px] w-[282px] rounded-[10px] border border-solid border-[#32b6e9] bg-white shadow-[0px_4px_4px_#00000040] transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-2 hover:scale-105 cursor-pointer">
           <CardHeader className="absolute top-[9px] left-[13px] h-[46px] w-[260px] p-0">
             <CardTitle className="[font-family:'Inter',Helvetica] text-[25px] leading-[normal] font-bold tracking-[0] text-[#0475bc]">
               Safety Copilot
@@ -375,12 +375,12 @@ export default function ResilienceResponsePage() {
             <div className="absolute top-[77px] left-[13px] h-[35px] w-[254px] [font-family:'Inter',Helvetica] text-[15px] leading-[normal] font-medium tracking-[0] text-black">
               Rainfall Rate
             </div>
-            <div className="absolute top-[187px] left-3 h-[209px] w-[254px] [font-family:'Inter',Helvetica] text-[15px] leading-[30px] font-medium tracking-[0] text-black italic">
+            <div className="absolute top-[187px] left-3 h-[209px] w-[254px] [font-family:'Inter',Helvetica] text-[15px] leading-[30px] font-medium tracking-[0] text-black italic transition-colors duration-300 hover:text-blue-800">
               Peringatan: Hujan deras terdeteksi di area operasional. Harap hentikan sementara
               aktivitas bongkar muat, gunakan perlengkapan pelindung hujan, dan pastikan peralatan
               listrik atau crane dalam kondisi aman sebelum melanjutkan pekerjaan.
             </div>
-            <div className="absolute top-[120px] left-[52px] h-6 w-44 text-center [font-family:'Inter',Helvetica] text-3xl leading-[normal] font-bold tracking-[0] text-[#1ca52c]">
+            <div className="absolute top-[120px] left-[52px] h-6 w-44 text-center [font-family:'Inter',Helvetica] text-3xl leading-[normal] font-bold tracking-[0] text-[#1ca52c] transition-all duration-300 hover:scale-110 hover:text-green-600">
               87.1%
             </div>
           </CardContent>
